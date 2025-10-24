@@ -1,0 +1,98 @@
+.input-box {
+  color: white;
+  position: fixed;
+  bottom: 65px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1080px;
+  background-color: black;
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 8px;
+
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.6px);
+  -webkit-backdrop-filter: blur(11.6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-box textarea {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  resize: none;
+  overflow-y: auto;
+  font-size: 20px;
+  max-height: 20vh;
+  color: black;
+  /* deixa o texto branco */
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(10.7px);
+
+  border-right: 7px solid #646464;
+}
+
+/* cor do placeholder */
+.input-box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.input-box textarea:focus {
+  outline: none;
+}
+
+.input-box button {
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  font-weight: bold;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.6px);
+  -webkit-backdrop-filter: blur(11.6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.send {
+  max-height: 40px;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.send:hover {
+  transform: scale(1.1);
+}
+
+.send:active{
+  border-radius: 12px;
+  filter: brightness(1) drop-shadow(0 0 20px white);
+}
+
+.noSend {
+  opacity: 50%;
+  max-height: 40px;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}

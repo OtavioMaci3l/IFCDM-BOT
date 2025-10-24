@@ -1,0 +1,173 @@
+.historico {
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 1000px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.assitent {
+  background: #2f3b2f;
+  border-left: 4px solid #55A855;
+  padding: 10px;
+  margin: 40px 50% 40px 0;
+  color: white;
+  border-radius: 12px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+
+  animation: emergeLeft 0.3s ease-out;
+}
+
+.assitent:hover {
+  transform: scale(1.02);
+}
+
+.user {
+  color: black;
+  background: #c9c9c9;
+  border-right: 4px solid #646464;
+  padding: 10px;
+  margin: 40px 0 40px 50%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+
+  animation: emergeRight 0.3s ease-out;
+}
+
+.user:hover {
+  transform: scale(1.02);
+}
+
+.assitent a,
+.user a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.assitent a:hover,
+.user a:hover {
+  color: #9eeb9e;
+  text-decoration: underline;
+}
+
+.digitando {
+  background: #2f3b2f;
+  border-left: 4px solid #55A855;
+  padding: 10px;
+  margin: 40px 50% 40px 0;
+  color: white;
+  border-radius: 12px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  animation: emergeLeft 0.3s ease-out;
+}
+
+.digitando:hover {
+  transform: scale(1.02);
+}
+
+.espace {
+  margin-top: 100px;
+  margin-bottom: 30vh;
+}
+
+.bemVindo {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  color: white;
+  padding: 20px;
+}
+
+.bemVindo h1 {
+  font-size: 33px;
+  margin-bottom: 30px;
+  color: #7CFF7C;
+  animation-name: bemVindo;
+  animation-duration: 2s;
+}
+
+.sugestoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  animation-name: bemVindo;
+  animation-duration: 2s;
+}
+
+.sugestao {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sugestao:hover {
+  background: rgba(124, 255, 124, 0.15);
+  font-size: 19px;
+  padding: 17px 23px;
+}
+
+.trash{
+  position: fixed;
+  max-width: 10vh;
+  cursor: pointer;
+}
+.trash img{
+  opacity: 1%;
+  max-width: 10vh;
+}
+
+@keyframes emergeRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes emergeLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bemVindo {
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
