@@ -2,6 +2,10 @@ import google.generativeai as genai
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import database
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = FastAPI()
 
@@ -13,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-genai.configure(api_key="AIzaSyDNsyDgPSmYP9EBSF6VJtH_oIXy3Hlz1OE")
+genai.configure(api_key=os.getenv("API_KEY_GEMINI"))
 
 global thread
 thread = []
